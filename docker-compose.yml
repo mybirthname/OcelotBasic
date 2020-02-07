@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  apigetway:
+    image: ${DOCKER_REGISTRY-}apigetway
+    build:
+      context: .
+      dockerfile: ApiGetway/Dockerfile
+
+  productwebapi:
+    image: ${DOCKER_REGISTRY-}productwebapi
+    build:
+      context: .
+      dockerfile: ProductWebApi/Dockerfile
+
+
+  customerwebapi:
+    image: ${DOCKER_REGISTRY-}customerwebapi
+    build:
+      context: .
+      dockerfile: CustomerWebApi/Dockerfile
+

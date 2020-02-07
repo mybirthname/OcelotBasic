@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:7000",
-      "sslPort": 7001
+      "applicationUrl": "http://localhost:53602",
+      "sslPort": 44322
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",
@@ -12,31 +12,31 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "product",
+      "launchUrl": "api/product",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ApiGetway": {
+    "ProductWebApi": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "product",
+      "launchUrl": "api/product",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:7001;http://localhost:7000"
+      "applicationUrl": "https://localhost:9001;http://localhost:9000"
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/product",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/product",
       "environmentVariables": {
         "ASPNETCORE_URLS": "https://+:443;http://+:80",
-        "ASPNETCORE_HTTPS_PORT": "7001"
+        "ASPNETCORE_HTTPS_PORT": "9001"
       },
-      "httpPort": 7000,
+      "httpPort": 9000,
       "useSSL": true,
-      "sslPort": 7001
+      "sslPort": 9001
     }
   }
 }

@@ -10,10 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Ocelot.DependencyInjection;
-using Ocelot.Middleware;
 
-namespace ApiGetway
+namespace ProductWebApi
 {
     public class Startup
     {
@@ -27,7 +25,7 @@ namespace ApiGetway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,8 +46,6 @@ namespace ApiGetway
             {
                 endpoints.MapControllers();
             });
-            app.UseOcelot().Wait();
-
         }
     }
 }
